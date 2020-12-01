@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+
+  dev:
+    build: ./docker/dev
+    volumes:
+      - './app:/app'
+    ports:
+      - '80:4200'
+
+  prod:
+    build: .
+    ports:
+      - '80:80'
